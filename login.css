@@ -1,0 +1,128 @@
+body {
+  background: #f3ecec;
+}
+.animate {
+  -webkit-transition: all 0.3s linear;
+  transition: all 0.3s linear;
+}
+.text-center {
+  text-align: center;
+}
+
+a {
+  color: #d340ca;
+}
+a:hover,
+a:focus {
+  color: #e84eaa;
+  -webkit-transition: all 0.3s linear;
+  transition: all 0.3s linear;
+}
+.text-primary {
+  color: #e62ed9;
+}
+input:-webkit-autofill {
+  -webkit-box-shadow: 0 0 0 1000px white inset !important;
+}
+.logo h1 {
+  size: 100px;
+  color: #bc19b179;
+  margin-bottom: 50px;
+}
+button {
+  cursor: pointer;
+  background: #a9078c;
+  width: 100%;
+  border: 0;
+  padding: 10px 15px;
+  color: #fff;
+  font-size: 21px;
+  -webkit-transition: 0.3s linear;
+  transition: 0.3s linear;
+}
+
+.input-group {
+  position: relative;
+  margin-bottom: 20px;
+}
+.input-group label {
+  position: absolute;
+  top: 9px;
+  left: 10px;
+  font-size: 16px;
+  color: #cdcdcd;
+  font-weight: normal;
+  padding: 2px 5px;
+  z-index: 5;
+  -webkit-transition: all 0.3s linear;
+  transition: all 0.3s linear;
+}
+.input-group input {
+  outline: none;
+  display: block;
+  width: 100%;
+  height: 40px;
+  position: relative;
+  z-index: 3;
+  border: 1px solid #d9d9d9;
+  padding: 10px 10px;
+  background: #ffffff;
+  box-sizing: border-box;
+  font-weight: 400;
+  -webkit-transition: 0.3s ease;
+  transition: 0.3s ease;
+}
+.input-group .lighting {
+  background: #f20bcf;
+  width: 0;
+  height: 2px;
+  display: inline-block;
+  position: absolute;
+  top: 40px;
+  left: 0;
+  -webkit-transition: all 0.3s linear;
+  transition: all 0.3s linear;
+}
+
+.wrapper {
+  width: 320px;
+  background: #fff;
+  margin: 20px auto;
+  min-height: 200px;
+  border: 1px solid #f3f3f3;
+}
+.wrapper .inner-warpper {
+  padding: 50px 30px 50px;
+  box-shadow: 1px 1.732px 10px 0px rgba(0, 0, 0, 0.063);
+}
+.wrapper .title {
+  margin-top: 5px;
+}
+.wrapper .signup-wrapper {
+  padding: 10px;
+  font-size: 14px;
+  background: #dbd8d8;
+}
+.wrapper .signup-wrapper a {
+  text-decoration: none;
+  color: #747070;
+}
+.wrapper .signup-wrapper a:hover {
+  text-decoration: underline;
+}
+@-webkit-keyframes tooltipanimation {
+  from {
+    margin-top: -28px;
+  }
+  to {
+    margin-top: 0;
+  }
+}
+@keyframes tooltipanimation {
+  from {
+    margin-top: -28px;
+  }
+  to {
+    margin-top: 0;
+  }
+}
