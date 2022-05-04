@@ -1,10 +1,9 @@
 body {
-  background: #f3ecec;
+  background: #e487d9;  /* fallback for old browsers */
+  background: -webkit-linear-gradient(to right, #6fc5f0, #eaa3da);  
+  background: linear-gradient(to right, #62bfed, #eaa6df);
 }
-.animate {
-  -webkit-transition: all 0.3s linear;
-  transition: all 0.3s linear;
-}
+
 .text-center {
   text-align: center;
 }
@@ -12,23 +11,24 @@ body {
 a {
   color: #d340ca;
 }
+
 a:hover,
 a:focus {
   color: #e84eaa;
-  -webkit-transition: all 0.3s linear;
-  transition: all 0.3s linear;
 }
+
 .text-primary {
   color: #e62ed9;
 }
-input:-webkit-autofill {
-  -webkit-box-shadow: 0 0 0 1000px white inset !important;
-}
+
 .logo h1 {
   size: 100px;
-  color: #bc19b179;
-  margin-bottom: 50px;
+  color: #eb31df79;
+  margin-bottom: 30px;
+  margin-top: 50px;
+  font-size: 50px ;
 }
+
 button {
   cursor: pointer;
   background: #a9078c;
@@ -37,8 +37,6 @@ button {
   padding: 10px 15px;
   color: #fff;
   font-size: 21px;
-  -webkit-transition: 0.3s linear;
-  transition: 0.3s linear;
 }
 
 .input-group {
@@ -53,10 +51,9 @@ button {
   color: #cdcdcd;
   font-weight: normal;
   padding: 2px 5px;
-  z-index: 5;
-  -webkit-transition: all 0.3s linear;
-  transition: all 0.3s linear;
+  z-index: 5;  
 }
+
 .input-group input {
   outline: none;
   display: block;
@@ -69,9 +66,8 @@ button {
   background: #ffffff;
   box-sizing: border-box;
   font-weight: 400;
-  -webkit-transition: 0.3s ease;
-  transition: 0.3s ease;
 }
+
 .input-group .lighting {
   background: #f20bcf;
   width: 0;
@@ -80,8 +76,6 @@ button {
   position: absolute;
   top: 40px;
   left: 0;
-  -webkit-transition: all 0.3s linear;
-  transition: all 0.3s linear;
 }
 
 .wrapper {
@@ -110,19 +104,4 @@ button {
 .wrapper .signup-wrapper a:hover {
   text-decoration: underline;
 }
-@-webkit-keyframes tooltipanimation {
-  from {
-    margin-top: -28px;
-  }
-  to {
-    margin-top: 0;
-  }
-}
-@keyframes tooltipanimation {
-  from {
-    margin-top: -28px;
-  }
-  to {
-    margin-top: 0;
-  }
-}
+
