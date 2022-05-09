@@ -21,6 +21,9 @@
         <main>
             <div class="container-fluid">
                 <p>Congratulation! You have logged into password protected page. <a href="logout.php">Click here</a> to Logout.</p>
+
+                <?php echo $_SESSION['UserData']['Useremail'] ?>
+
                 <?php include_once'cookie.php'; ?>
             </div>
         </main>

@@ -2,8 +2,15 @@
 
 if(!isset($_SESSION['UserData']['Useremail'])){
         header("location:login.php");
-        exit;
 }
+?>
+
+<?php if (isset($_POST['submit'])) {
+        $origin_image = $_FILES["profile_image"]["tmp_name"];
+        $target_dir = 'uploads/';
+        $path = $target_dir . basename($_FILES["profile_image"]["name"]);
+        move_uploaded_file($origin_image, $path);
+} 
 ?>
 
 <!DOCTYPE html>
@@ -26,10 +33,13 @@ if(!isset($_SESSION['UserData']['Useremail'])){
             <div class="col-lg-4">
                       <div class="card shadow-sm">
                         <div class="card-header bg-transparent text-center">
-                          <img class="profile_img" src="https://source.unsplash.com/600x300/?student" alt="student dp">
+                          <img class="profile_img" src="<?php echo $path;?>" alt="student dp">
                         </div>
                         <div class="card-upload text-center">
-                            <button class="btn btn-primary btn-lg" type="button">Upload new image</button>
+                          <form action="my_account.php" method="post" name="upload_profile" enctype='application/x-www-form-urlencoded'>
+                            <input type="file" class="form-control" id="profile_image" name="profile_image">
+                            <button class="btn btn-primary btn-lg" type="button" name="submit">Upload new image</button>
+                          </form>
                         </div>
                       </div>
             </div>
@@ -57,6 +67,7 @@ if(!isset($_SESSION['UserData']['Useremail'])){
               </div>
               <div class="card shadow-sm">
                 <div class="card-body text-right">
+                  <?php echo $_SESSION['UserData']['Useremail'] ?>
                   <button class="btn btn-primary btn-lg" type="button" onclick="location.href='logout.php'">Log Out</button>
                 </div>
               </div>  

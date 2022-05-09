@@ -20,9 +20,9 @@ accept_cookie.onclick = function(){
 let get_cookie= function(cookie_name){
   let name = cookie_name + "=";
   let decode_cookie = decodeURIComponent(document.cookie);
-  let ca = decode_cookie.split(';');
-  for(let i = 0; i < ca.length; i++) {
-    let ck = ca[i];
+  let cookie_get = decode_cookie.split(';');
+  for(let i = 0; i < cookie_get.length; i++) {
+    let ck = cookie_get[i];
     while (ck.charAt(0) == ' ') {
       ck = ck.substring(1);
     }
