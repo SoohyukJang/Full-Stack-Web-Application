@@ -15,8 +15,8 @@
                     $data = fgetcsv($file);
 
                     if(is_array($data)) {
-                        $email = $data[0];
-                        $veri_pw = $data[1];
+                        $email = $data["0"];
+                        $veri_pw = $data["1"];
 
                         if ($email == $Useremail) {
                             if (password_verify($Password, $veri_pw)) {

@@ -63,12 +63,12 @@
 <?php       
         /* Check Login form submitted */        
         if(isset($_POST['Submit'])){
-          $email = $_POST['Useremail'];
+          $useremail = $_POST['Useremail'];
           $pw = password_hash($_POST['Password'],PASSWORD_DEFAULT);
           $fname = $_POST['Firstname'];
           $lname = $_POST['Lastname'];
           $comma = ',';
-          $new_user = $email . $comma . $pw . $comma . $fname . $comma . $lname . "\n";
+          $new_user = $useremail . $comma . $pw . $comma . $fname . $comma . $lname . "\n";
           $myfile = fopen("accounts.db", "a") or die("Unable to open file!");
           fwrite($myfile, $new_user);
           fclose($myfile);}
