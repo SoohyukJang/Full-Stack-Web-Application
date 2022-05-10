@@ -5,13 +5,20 @@ if(!isset($_SESSION['UserData']['Useremail'])){
 }
 ?>
 
-<?php if (isset($_POST['submit'])) {
-        $origin_image = $_FILES["profile_image"]["tmp_name"];
-        $target_dir = 'uploads/';
-        $path = $target_dir . basename($_FILES["profile_image"]["name"]);
-        move_uploaded_file($origin_image, $path);
-} 
+ <?php  if (isset($_POST["Submit"])) {
+            $file = $_FILES['profile_image'];
+            print_r($file);
+        // if ($_FILES["profile_image"]["error"] == UPLOAD_ERR_OK) {
+          // $new_location = './avatar.jpg';
+          // move_uploaded_file($_FILES['profile_image']['tmp_name'], $new_location);
+        // }     
+ } 
 ?>
+
+<!-- $origin_image = $_FILES["profile_image"]["tmp_name"];
+          $target_dir = 'uploads/';
+          $path = $target_dir . basename($_FILES["profile_image"]["name"]);
+          move_uploaded_file($origin_image, $path); -->
 
 <!DOCTYPE html>
 <html>
@@ -33,12 +40,12 @@ if(!isset($_SESSION['UserData']['Useremail'])){
             <div class="col-lg-4">
                       <div class="card shadow-sm">
                         <div class="card-header bg-transparent text-center">
-                          <img class="profile_img" src="<?php echo $path;?>" alt="student dp">
+                          <img class="profile_img" src="./avatar.jpg" alt="student dp">
                         </div>
                         <div class="card-upload text-center">
-                          <form action="my_account.php" method="post" name="upload_profile" enctype='application/x-www-form-urlencoded'>
+                          <form action="my_account.php" method="post" name="upload_profile" enctype='application/form-data' id="upload_profile">
                             <input type="file" class="form-control" id="profile_image" name="profile_image">
-                            <button class="btn btn-primary btn-lg" type="button" name="submit">Upload new image</button>
+                            <button class="btn btn-primary btn-lg" type="submit" name="Submit" form="upload_profile">Upload new image</button>
                           </form>
                         </div>
                       </div>

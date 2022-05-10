@@ -1,6 +1,6 @@
 <?php session_start(); /* Starts the session */
 
-if(!isset($_SESSION['UserData']['Useremail'])){
+if(!($_SESSION['UserData']['Useremail'] == 'Admin123456')){
         header("location:login.php");
 }
 ?>
@@ -13,10 +13,10 @@ if(!isset($_SESSION['UserData']['Useremail'])){
         <link rel="stylesheet" href="header_footer.css">
         <link rel="stylesheet" href="css/bootstrap.min.css">
         <link rel="stylesheet" href="index.css">
-        <script src="js/bootstrap.bundle.min.js"></script>
+        
     </head>
     <body>
-    <header class="navbar navbar-expand-lg fixed-top">
+    <header class="navbar navbar-expand-lg">
         <div class="container-fluid mx-5">
             <svg id="camera_logo" xmlns="http://www.w3.org/2000/svg" width="50" height="50" fill="currentColor" class="bi bi-camera mx-3" viewBox="0 0 16 16">
                 <path d="M15 12a1 1 0 0 1-1 1H2a1 1 0 0 1-1-1V6a1 1 0 0 1 1-1h1.172a3 3 0 0 0 2.12-.879l.83-.828A1 1 0 0 1 6.827 3h2.344a1 1 0 0 1 .707.293l.828.828A3 3 0 0 0 12.828 5H14a1 1 0 0 1 1 1v6zM2 4a2 2 0 0 0-2 2v6a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V6a2 2 0 0 0-2-2h-1.172a2 2 0 0 1-1.414-.586l-.828-.828A2 2 0 0 0 9.172 2H6.828a2 2 0 0 0-1.414.586l-.828.828A2 2 0 0 1 3.172 4H2z"/>
@@ -48,8 +48,22 @@ if(!isset($_SESSION['UserData']['Useremail'])){
         <main>
             <div class="container-fluid">
                 <p>Congratulation! You have logged into password protected page. <a href="logout.php">Click here</a> to Logout.</p>
-                <?php include_once'cookie.php'; ?>
             </div>
+            <div aria-label="Page navigation example">
+                <ul class="pagination justify-content-center">
+                    <li class="page-item"><a class="page-link" href="#1">1</a></li>
+                    <li class="page-item"><a class="page-link" href="#2">2</a></li>
+                    <li class="page-item"><a class="page-link" href="#3">3</a></li>
+                </ul>
+            </div>
+            <div>
+                <!-- <script src="pagination.js"></script> -->
+                <script src="js/bootstrap.bundle.min.js"></script>
+                <script src="js/bootstrap.min.js"></script>
+
+            </div>
+
+            <?php include_once'cookie.php'; ?>
         </main>
         <?php include_once'footer.php';?>
     </body>
