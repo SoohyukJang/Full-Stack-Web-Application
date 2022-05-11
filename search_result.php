@@ -21,7 +21,7 @@
 
         $file =  array_map('str_getcsv', file('test.db'));
 
-        $accountsdb = array();
+        $accountsdb = [];
 
         foreach($keyWords as $key) {
             $key = '/' . $key . '/i';

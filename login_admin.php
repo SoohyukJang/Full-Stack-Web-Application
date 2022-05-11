@@ -3,14 +3,14 @@
         /* Check Login form submitted */        
         if(isset($_POST['Submit'])){
                 /* Define username and associated password array */
-                $logins = array('admin@gmail.com' => 'Admin123456');
+                $loginAdmin = array('admin@gmail.com' => 'Admin123456');
                 
                 /* Check and assign submitted Username and Password to new variable */
                 $Useremail = isset($_POST['Useremail']) ? $_POST['Useremail'] : '';
                 $Password = isset($_POST['Password']) ? $_POST['Password'] : '';
                 
                 /* Check Username and Password existence in defined array */            
-                if (isset($logins[$Useremail]) && $logins[$Useremail] == $Password){
+                if (isset($loginAdmin[$Useremail]) && $logins[$Useremail] == $Password){
                         /* Successful attemp: Set session variables and redirect to Main page  */
                         $_SESSION['UserData']['Useremail']=$logins[$Useremail];
                         header("location:index_admin.php");

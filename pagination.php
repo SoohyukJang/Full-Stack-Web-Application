@@ -8,6 +8,7 @@
 
         // read from accounts.db to array.
         $accountsdb =  array_map('str_getcsv', file('test.db')); 
+        print_r($accountsdb);
 
         // Setting up pagination
         $pagination = array(
