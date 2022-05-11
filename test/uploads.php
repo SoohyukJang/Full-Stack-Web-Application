@@ -12,6 +12,7 @@
             $fileExt = explode('.', $fileName);
             $fileActualExt = strtolower(end($fileExt));
             $allowed = array('jpg', 'jpeg', 'png', 'gif');
+            
 
             if (in_array($fileActualExt, $allowed)) {
                 if ($fileError === 0) {
@@ -43,6 +44,13 @@
     </body>
 
 </html>                        
-                        
+                  
+
+if (isset($_POST["Submit"])) {
+          if ($_FILES["profile_image"]["error"] == UPLOAD_ERR_OK) {
+          $new_location = 'uploads/' . $_SESSION['UserData']['Useremail'];
+          move_uploaded_file($_FILES['profile_image']['tmp_name'], $new_location);
+        }     
+ } 
                         
                         

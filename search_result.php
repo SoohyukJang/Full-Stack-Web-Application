@@ -14,27 +14,27 @@
         foreach ($keyWords2 as $keyNum) {
             array_push($keyWords,$keyNum);
         };
-        }
+        
 
         $file =  array_map('str_getcsv', file('test.db'));
 
-        $file2 = fopen("search.csv", "w+") or die("Unable to open file!");
+
+        $accountsdb = array();
 
         foreach($keyWords as $key) {
             $key = '/' . $key . '/i';
+            
             foreach ($file as $userKey) {
                 if (preg_match($key, $userKey[0])) {
-                    fputcsv($file2,$userKey);
+                    $accountsdb[] = $userKey;
                 } else {
 
                     if (preg_match($key, $userKey[2])) {
-
-                        fputcsv($file2,$userKey);
+                      $accountsdb[] = $userKey;
                     } else {
 
                         if (preg_match($key, $userKey[3])) {
-
-                            fputcsv($file2,$userKey);
+                          $accountsdb[] = $userKey;
                         } 
                         
                     }   
@@ -42,14 +42,18 @@
             
             }
             
-            fclose($file2);
+            $fileSearch = fopen("search_result.csv", "w+") or die("Unable to open file!");
+            foreach ($accountsdb as $line) {
+              fputcsv($fileSearch,$line);
+            };
+            fclose($fileSearch);
         }
-        
+    } 
 ?>
 
     <?php
 
-        $accountsdb = array_map('str_getcsv', file('search.csv'));
+        $accountsdb = array_map('str_getcsv', file('search_result.csv'));
         // Setting up pagination
         $pagination = array(
             'itemPerPage' => isset($_GET['itemPerPage']) ? (int) $_GET['itemPerPage'] : 10,
@@ -151,5 +155,4 @@
 	</li>
 </ul>
 </div>
-
 </html>

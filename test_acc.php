@@ -4,8 +4,31 @@ if(!isset($_SESSION['UserData']['Useremail'])){
         header("location:login.php");
 }
 ?>
+ <?php  
+ if (isset($_POST["Submit_img"])) {
+  $file = $_FILES['profile_image'];
+  
+  $fileName = $_FILES['profile_image']['name'];
+  $fileTmp = $_FILES['profile_image']['tmp_name'];
+  $fileSize = $_FILES['profile_image']['size'];
+  $fileError = $_FILES['profile_image']['error'];
+  $fileType= $_FILES['profile_image']['type'];
 
-<?php include_once('upload_img.php') ?>
+  $fileExt = explode('.', $fileName);
+  $fileActualExt = strtolower(end($fileExt));
+  $allowed = array('jpg', 'jpeg', 'png', 'gif');
+  $fileUserName = explode('@', $_SESSION['UserData']['Useremail']);
+  $fileUserName = $fileUserName[0];
+
+  if ($_FILES["profile_image"]["error"] == UPLOAD_ERR_OK) {
+
+      $fileNameNew = $fileUserName . "." . $fileActualExt;
+      $fileDestination = 'uploads/' . $fileNameNew;
+      move_uploaded_file($fileTmp, $fileDestination);
+  }
+        
+}
+?>
 
 <!DOCTYPE html>
 <html>
@@ -30,19 +53,19 @@ if(!isset($_SESSION['UserData']['Useremail'])){
                           <?php  $testDB =  array_map('str_getcsv', file('test.db'));
                           $key = '/' . $_SESSION['UserData']['Useremail'] . '/i';
 
-                          $userInfo = [];
+                          $userImg = [];
                           foreach ($testDB as $userMail) {
                             if (preg_match($key, $userMail[0])) {
-                                $userInfo[] = $userMail;
+                                $userImg[] = $userMail[4];
                                 break;
                             } 
                           }
                           ?>
 
-                          <img class="profile_img" src="uploads/<?php echo $userInfo[0][4];?>" alt="student dp">
+                          <img class="profile_img" src="uploads/<?php echo $userImg[0];?>" alt="student dp">
                         </div>
                         <div class="card-upload text-center">
-                          <form action="my_account.php" method="post" name="upload_profile" enctype="multipart/form-data" id="upload_profile">
+                          <form action="test_acc.php" method="post" name="upload_profile" enctype="multipart/form-data" id="upload_profile">
                             <input type="file" class="form-control" id="profile_image" name="profile_image">
                             <button class="btn btn-primary btn-lg" type="submit" name="Submit_img" form="upload_profile">Upload new image</button>
                           </form>
@@ -58,21 +81,22 @@ if(!isset($_SESSION['UserData']['Useremail'])){
                   <table class="table table-bordered">
                     <tr>
                       <th width="40%">Email Address:</th>
-                      <td><?php echo $userInfo[0][0];?></td>
+                      <td></td>
                     </tr>
                     <tr>
                       <th width="40%">First Name:</th>
-                      <td><?php echo $userInfo[0][2];?></td>
+                      <td></td>
                     </tr>
                     <tr>
                       <th width="40%">Last Name:</th>
-                      <td><?php echo $userInfo[0][3];?></td>
+                      <td></td>
                     </tr>
                   </table>
                 </div>
               </div>
               <div class="card shadow-sm">
                 <div class="card-body text-right">
+                  <?php echo $_SESSION['UserData']['Useremail'] ?>
                   <button class="btn btn-primary btn-lg" type="button" onclick="location.href='logout.php'">Log Out</button>
                 </div>
               </div>  
