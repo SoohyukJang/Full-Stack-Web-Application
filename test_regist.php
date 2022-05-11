@@ -7,6 +7,25 @@
           $lname = $_POST['Lastname'];
           $comma = ',';
 
+          // write img file into db file (copy from upload_img.php)
+          $fileName = $_FILES['profile_image']['name'];
+          $fileTmp = $_FILES['profile_image']['tmp_name'];
+          $fileSize = $_FILES['profile_image']['size'];
+          $fileError = $_FILES['profile_image']['error'];
+          $fileType= $_FILES['profile_image']['type'];
+        
+          $fileExt = explode('.', $fileName);
+          $fileActualExt = strtolower(end($fileExt));
+          $allowed = array('jpg', 'jpeg', 'png', 'gif');
+          $fileUserName = explode('@', $_SESSION['UserData']['Useremail']);
+          $fileUserName = $fileUserName[0];
+        
+          if ($_FILES["profile_image"]["error"] == UPLOAD_ERR_OK) {
+              $fileNameNew = $fileUserName . "." . $fileActualExt;
+              $fileDestination = 'uploads/' . $fileNameNew;
+              move_uploaded_file($fileTmp, $fileDestination);
+          }
+
           $file = fopen("test.db","r");
 
                 while(! feof($file)) {
@@ -31,7 +50,7 @@
                 $msg="<span style='color:red'>Invalid Login Details</span>";
               }
               else {
-                $new_user =  $useremail . $comma . $pw . $comma . $fname . $comma . $lname . "\n";
+                $new_user =  $useremail . $comma . $pw . $comma . $fname . $comma . $lname . $comma . $fileNameNew . "\n";
                 $old_file = file_get_contents("test.db");
                 $content = $new_user . $old_file;
                 file_put_contents("test.db",$content);
