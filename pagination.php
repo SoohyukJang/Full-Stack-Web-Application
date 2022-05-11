@@ -36,28 +36,28 @@
     </div>
     
     
-    <div>
-    <table class="table">
-      <thead>
-        <tr>
-          <th scope="col">Email</th>
-          <th scope="col">Password</th>
-          <th scope="col">First Name</th>
-          <th scope="col">Last Name</th>
-        </tr>
-      <thead>
-      <tbody>
-        <?php foreach($pageOrder as $user) { ?>
-        <tr>
-          <td><?php echo $user[0] ?></td>
-          <td><?php echo $user[1] ?></td>
-          <td><?php echo $user[2] ?></td>
-          <td><?php echo $user[3] ?></td>
-        </tr>
-        <?php } ?>
-       
-      </tbody>
-    </table>
+    <div class="table-responsive">
+      <table class="table">
+        <thead>
+          <tr>
+            <th scope="col">Email</th>
+            <th scope="col">Password</th>
+            <th scope="col">First Name</th>
+            <th scope="col">Last Name</th>
+          </tr>
+        <thead>
+        <tbody>
+          <?php foreach($pageOrder as $user) { ?>
+          <tr>
+            <td><?php echo $user[0] ?></td>
+            <td><?php echo $user[1] ?></td>
+            <td><?php echo $user[2] ?></td>
+            <td><?php echo $user[3] ?></td>
+          </tr>
+          <?php } ?>
+        
+        </tbody>
+      </table>
     </div>
 
 

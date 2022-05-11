@@ -9,15 +9,17 @@
 
         if (isset($_POST['submitSearch'])) {
 
-        $keyWords2 = $_POST['searchField'];
-        $keyWords2 = explode(' ', strtolower($keyWords2));
-        foreach ($keyWords2 as $keyNum) {
-            array_push($keyWords,$keyNum);
-        };
+              $keyWords2 = $_POST['searchField'];
+
+              $keyWords2 = explode(' ', strtolower($keyWords2));
+
+              foreach ($keyWords2 as $keyNum) {
+                array_push($keyWords,$keyNum);
+          
+              };
         
 
         $file =  array_map('str_getcsv', file('test.db'));
-
 
         $accountsdb = array();
 
@@ -82,7 +84,7 @@
       </form>
     </div>
     
-    <div>
+    <div class="table-responsive">
     <table class="table">
       <thead>
         <tr>

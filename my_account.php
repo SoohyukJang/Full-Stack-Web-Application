@@ -54,18 +54,18 @@ if(!isset($_SESSION['UserData']['Useremail'])){
                 <div class="card-header bg-transparent border-0">
                   <h3 class="mb-0">Account Details</h3>
                 </div>
-                <div class="card-body">
-                  <table class="table table-bordered">
+                <div class="card-body table-responsive">
+                  <table class="table table-bordered detailed-info">
                     <tr>
-                      <th width="40%">Email Address:</th>
+                      <th scope="row">Email Address:</th>
                       <td><?php echo $userInfo[0][0];?></td>
                     </tr>
                     <tr>
-                      <th width="40%">First Name:</th>
+                      <th scope="row" >First Name:</th>
                       <td><?php echo $userInfo[0][2];?></td>
                     </tr>
                     <tr>
-                      <th width="40%">Last Name:</th>
+                      <th scope="row">Last Name:</th>
                       <td><?php echo $userInfo[0][3];?></td>
                     </tr>
                   </table>

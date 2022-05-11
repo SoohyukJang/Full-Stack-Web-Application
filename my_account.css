@@ -17,21 +17,21 @@ body main{
     border-radius: 50%;
 }
 .profile .card h3 {
-    font-size: 20px;
+    font-size: 24px;
     font-weight: 700;
 }
 .profile .card p {
-    font-size: 16px;
+    font-size: 20px;
     color: #000;
 }
 .profile .table th,
 .profile .table td {
-    font-size: 14px;
+    font-size: 20px;
     padding: 5px 10px;
     color: #000;
 }
 .card .card-upload button {
-    font-size: 15px;
+    font-size: 16px;
     margin: 10px;
 }
 
@@ -44,4 +44,7 @@ body main{
 }
 .shadow-sm {
     margin-top: 20px;
+}
+.detailed info th {
+    width: auto;
 }
