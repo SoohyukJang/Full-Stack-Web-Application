@@ -17,7 +17,7 @@
           $fileExt = explode('.', $fileName);
           $fileActualExt = strtolower(end($fileExt));
           $allowed = array('jpg', 'jpeg', 'png', 'gif');
-          $fileUserName = explode('@', $_SESSION['UserData']['Useremail']);
+          $fileUserName = explode('@', $useremail);
           $fileUserName = $fileUserName[0];
         
           if ($_FILES["profile_image"]["error"] == UPLOAD_ERR_OK) {

@@ -17,7 +17,7 @@
           $fileExt = explode('.', $fileName);
           $fileActualExt = strtolower(end($fileExt));
           $allowed = array('jpg', 'jpeg', 'png', 'gif');
-          $fileUserName = explode('@', $_SESSION['UserData']['Useremail']);
+          $fileUserName = explode('@', $useremail);
           $fileUserName = $fileUserName[0];
         
           if ($_FILES["profile_image"]["error"] == UPLOAD_ERR_OK) {
@@ -47,7 +47,7 @@
               fclose($file);
 
               if (isset($check) && isset($check2)) {
-                $msg="<span style='color:red'>Invalid Login Details</span>";
+                $msg="<span style='color:red'>Email Exist</span>";
               }
               else {
                 $new_user =  $useremail . $comma . $pw . $comma . $fname . $comma . $lname . $comma . $fileNameNew . "\n";
