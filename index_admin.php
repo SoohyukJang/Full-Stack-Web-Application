@@ -58,7 +58,6 @@ if(!($_SESSION['UserData']['Useremail'] == 'Admin123456')){
             </div>
             <div>
                 <!-- <script src="pagination.js"></script> -->
-                <script src="js/bootstrap.bundle.min.js"></script>
                 <script src="js/bootstrap.min.js"></script>
 
             </div>

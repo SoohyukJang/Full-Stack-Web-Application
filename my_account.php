@@ -6,12 +6,10 @@ if(!isset($_SESSION['UserData']['Useremail'])){
 ?>
 
  <?php  if (isset($_POST["Submit"])) {
-            $file = $_FILES['profile_image'];
-            print_r($file);
-        // if ($_FILES["profile_image"]["error"] == UPLOAD_ERR_OK) {
-          // $new_location = './avatar.jpg';
-          // move_uploaded_file($_FILES['profile_image']['tmp_name'], $new_location);
-        // }     
+          if ($_FILES["profile_image"]["error"] == UPLOAD_ERR_OK) {
+          $new_location = 'uploads/avatar.jpg';
+          move_uploaded_file($_FILES['profile_image']['tmp_name'], $new_location);
+        }     
  } 
 ?>
 
@@ -43,7 +41,7 @@ if(!isset($_SESSION['UserData']['Useremail'])){
                           <img class="profile_img" src="./avatar.jpg" alt="student dp">
                         </div>
                         <div class="card-upload text-center">
-                          <form action="my_account.php" method="post" name="upload_profile" enctype='application/form-data' id="upload_profile">
+                          <form action="my_account.php" method="post" name="upload_profile" enctype="multipart/form-data" id="upload_profile">
                             <input type="file" class="form-control" id="profile_image" name="profile_image">
                             <button class="btn btn-primary btn-lg" type="submit" name="Submit" form="upload_profile">Upload new image</button>
                           </form>
