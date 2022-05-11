@@ -99,7 +99,7 @@
             </div>
 
             <div class="input-group">
-              <input class="form-control" name="profile_img" id="profile_img" type="file" />
+              <input class="form-control" name="profile_image" id="profile_image" type="file" />
               <span class="lighting"></span>
             </div>
 
@@ -119,3 +119,5 @@
     <?php include_once'footer.php'; ?> 
   </body>
 </html>
+
+

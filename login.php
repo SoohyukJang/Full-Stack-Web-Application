@@ -9,7 +9,7 @@
                 $Useremail = isset($_POST['Useremail']) ? $_POST['Useremail'] : '';
                 $Password = isset($_POST['Password']) ? $_POST['Password'] : '';
 
-                $file = fopen("accounts.db","r");
+                $file = fopen("test.db","r");
 
                 while(! feof($file)) {
                     $data = fgetcsv($file);

@@ -7,7 +7,7 @@
           $lname = $_POST['Lastname'];
           $comma = ',';
 
-          $file = fopen("accounts.db","r");
+          $file = fopen("test.db","r");
 
                 while(! feof($file)) {
                     $data = fgetcsv($file);
@@ -32,7 +32,6 @@
               }
               else {
                 $new_user =  $useremail . $comma . $pw . $comma . $fname . $comma . $lname . "\n";
-                // $myfile = fopen("test.db", "a") or die("Unable to open file!");
                 $old_file = file_get_contents("test.db");
                 $content = $new_user . $old_file;
                 file_put_contents("test.db",$content);
@@ -100,7 +99,7 @@
             </div>
 
             <div class="input-group">
-              <input class="form-control" name="profile_img" id="profile_img" type="file" />
+              <input class="form-control" name="profile_image" id="profile_image" type="file" />
               <span class="lighting"></span>
             </div>
 

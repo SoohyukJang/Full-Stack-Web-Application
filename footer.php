@@ -4,7 +4,7 @@
         <div class="container">
             <div class="row">
                 <div class="col-lg-5 col-xs-12">
-                    <h2>Insta Kilogram</h2>
+                    <h2>InstaKilogram</h2>
                     <p class="pr-5 text-white-50">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam ac ante mollis quam tristique convallis </p>
                 </div>
                 <div class="col-lg-3 col-xs-12 footer-links">

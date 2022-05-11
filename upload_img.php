@@ -1,6 +1,5 @@
 <?php  
  if (isset($_POST["Submit_img"])) {
-  $file = $_FILES['profile_image'];
   
   $fileName = $_FILES['profile_image']['name'];
   $fileTmp = $_FILES['profile_image']['tmp_name'];
@@ -55,7 +54,8 @@
     $line = $line . "\n";
     fwrite($userFile2, $line);
   }
+  fclose($userFile2);
 }
 
-  fclose($userFile2);
+  
 ?>
