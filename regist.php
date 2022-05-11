@@ -7,7 +7,7 @@
           $lname = $_POST['Lastname'];
           $comma = ',';
 
-          $file = fopen("accounts.db","r");
+          $file = fopen("test.db","r");
 
                 while(! feof($file)) {
                     $data = fgetcsv($file);
@@ -34,7 +34,7 @@
                 $new_user =  $useremail . $comma . $pw . $comma . $fname . $comma . $lname . "\n";
                 $old_file = file_get_contents("test.db");
                 $content = $new_user . $old_file;
-                file_put_contents("accounts.db",$content);
+                file_put_contents("test.db",$content);
                 header("location:login.php");
               }
         }
