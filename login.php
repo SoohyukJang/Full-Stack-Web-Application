@@ -1,11 +1,8 @@
-<?php session_start(); /* Starts the session */
+<?php session_start(); // Starts the session 
         
-        /* Check Login form submitted */        
+        // Check Login form submitted */        
         if(isset($_POST['Submit'])){
-                /* Define username and associated password array */
-                // $logins = array('alex@gmail.com' => '123456','di@gmail.com' => '123456','an@gmail.com' => '123456');
-                
-                /* Check and assign submitted Username and Password to new variable */
+                // Check and assign submitted Username and Password to new variable 
                 $Useremail = isset($_POST['Useremail']) ? $_POST['Useremail'] : '';
                 $Password = isset($_POST['Password']) ? $_POST['Password'] : '';
 
@@ -48,7 +45,7 @@
     <link rel="stylesheet" href="cookie.css">
     <link rel="stylesheet" href="header_footer.css">
     <link rel="stylesheet" href="css/bootstrap.min.css">
-    <script src="js/bootstrap.bundle.min.js"></script>
+    
   </head>
 
   <body>

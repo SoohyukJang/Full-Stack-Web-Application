@@ -1,3 +1,12 @@
+<?php session_start(); /* Starts the session */
+
+if(!(isset($_SESSION['UserData']['Useremail']))){
+        header("location:login.php");
+} elseif (!($_SESSION['UserData']['Useremail'] == 'admin@gmail.com')) {
+        header("location:index.php");
+}
+?>
+
 <!DOCTYPE html>
 <html>
     <head>
@@ -92,6 +101,7 @@
           <th scope="col">Password</th>
           <th scope="col">First Name</th>
           <th scope="col">Last Name</th>
+          <th scope="col">View More</th>
         </tr>
       <thead>
       <tbody>
@@ -101,6 +111,11 @@
           <td><?php echo $user[1] ?></td>
           <td><?php echo $user[2] ?></td>
           <td><?php echo $user[3] ?></td>
+          <!-- sent useremail of user to user_detail.php for later use -->
+          <td><form action="user_detail.php" method="get">
+                <input type="hidden" name="user" value="<?php echo $user[0] ?>">
+                <input type="submit" value="View">
+            </form></td>
         </tr>
         <?php } ?>
        

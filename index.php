@@ -8,7 +8,6 @@
         <link rel="stylesheet" href="header_footer.css">
         <link rel="stylesheet" href="css/bootstrap.min.css">
         <link rel="stylesheet" href="index.css">
-        <script src="js/bootstrap.bundle.min.js"></script>
     </head>
     <body>
         <?php if(isset($_SESSION['UserData']['Useremail'])){ 

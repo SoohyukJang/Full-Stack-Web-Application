@@ -86,7 +86,7 @@
           <div><?php echo $msg;?> </div><?php } ?>
 
           <h2 class="title">Regist new account</h2>
-          <form action="" method="post" name="Regist_Form" enctype="multipart/form-data" id="Regist_Form">
+          <form action="regist.php" method="post" name="Regist_Form" enctype="multipart/form-data" id="Regist_Form">
 
             <!-- user email input -->
             <div class="input-group">

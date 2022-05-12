@@ -1,8 +1,8 @@
 <?php session_start(); /* Starts the session */
 
-if(!(isset($_SESSION['UserData']['Useremail']))){
+if(!($_SESSION['UserData']['Useremail'])){
         header("location:login.php");
-} elseif (!($_SESSION['UserData']['Useremail'] == 'admin@gmail.com')) {
+} elseif (!($_SESSION['UserData']['Useremail'] == 'Admin123456')) {
         header("location:index.php");
 }
 ?>

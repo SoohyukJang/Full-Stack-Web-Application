@@ -5,7 +5,7 @@
             <div class="row">
                 <div class="col-lg-5 col-xs-12">
                     <h2>InstaKilogram</h2>
-                    <p class="pr-5 text-white-50">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam ac ante mollis quam tristique convallis </p>
+                    <p class="pr-5 text-white-50">Share your momment with millions users!</p>
                 </div>
                 <div class="col-lg-3 col-xs-12 footer-links">
                     <h4 class="mt-lg-0 mt-sm-3">Links</h4>
@@ -18,7 +18,7 @@
                 </div>
                 <div class="col-lg-4 col-xs-12 location">
                     <h4 class="mt-lg-0 mt-sm-4">Location</h4>
-                    <p>22, Lorem ipsum dolor, consectetur adipiscing</p>
+                    <p>702 Nguyen Van Linh St, Tan Hung, District 7, HCMC</p>
                     <p class="mb-0">(84) 8395-357-967</p>
                     <p>webprogramming@rmit.edu.vn</p>
                 </div>

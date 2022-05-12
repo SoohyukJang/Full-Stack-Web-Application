@@ -1,21 +1,22 @@
-<?php session_start(); /* Starts the session */
+<?php session_start(); // Starts the session 
         
-        /* Check Login form submitted */        
-        if(isset($_POST['Submit'])){
-                /* Define username and associated password array */
-                $loginAdmin = array('admin@gmail.com' => 'Admin123456');
+        // Check Login form submitted        
+        if(isset($_POST['Submit_admin'])){
+                // Define username and associated password array 
+               $adminEmail = 'admin@gmail.com';
+               $adminPw = 'Admin123456';
                 
-                /* Check and assign submitted Username and Password to new variable */
-                $Useremail = isset($_POST['Useremail']) ? $_POST['Useremail'] : '';
-                $Password = isset($_POST['Password']) ? $_POST['Password'] : '';
-                
-                /* Check Username and Password existence in defined array */            
-                if (isset($loginAdmin[$Useremail]) && $logins[$Useremail] == $Password){
-                        /* Successful attemp: Set session variables and redirect to Main page  */
-                        $_SESSION['UserData']['Useremail']=$logins[$Useremail];
+                // Check and assign submitted Username and Password to new variable 
+                $Useremail = isset($_POST['adminEmail']) ? $_POST['adminEmail'] : '';
+                $Password = isset($_POST['adminPw']) ? $_POST['adminPw'] : '';
+
+                // Check if Username and Password match          
+                if ($adminEmail == $Useremail and $adminPw == $Password){
+                        // Successful attemp: Set session variables and redirect to admin idex page  
+                        $_SESSION['UserData']['Useremail'] = $adminEmail;
                         header("location:index_admin.php");
                 } else {
-                        /*Unsuccessful attempt: Set error message */
+                        //Unsuccessful attempt: Set error message 
                         $msg="<span style='color:red'>Invalid Login Details</span>";
                 }
         }
@@ -31,7 +32,6 @@
     <link rel="stylesheet" href="cookie.css">
     <link rel="stylesheet" href="header_footer.css">
     <link rel="stylesheet" href="css/bootstrap.min.css">
-    <script src="js/bootstrap.bundle.min.js"></script>
   </head>
 
   <body>
@@ -51,20 +51,18 @@
 
             <!-- user email input -->
             <div class="input-group">
-              <!-- <label class="placeholder" for="Useremail">User Email</label> -->
-              <input class="form-control" name="Useremail" id="Useremail" type="text" placeholder="Email" />
+              <input class="form-control" name="adminEmail" id="adminEmail" type="text" placeholder="Email" />
               <span class="lighting"></span>
             </div>
 
             <!-- password input -->
             <div class="input-group">
-              <!-- <label class="palceholder" for="Password">Password</label> -->
-              <input class="form-control" name="Password" id="Password" type="password" placeholder="Password" />
+              <input class="form-control" name="adminPw" id="adminPw" type="password" placeholder="Password" />
               <span class="lighting"></span>
             </div>
 
             <!-- submit button -->
-            <button class="login_btn" type="submit" value="Login" name="Submit" form="Login_admin_Form">Login</button>  
+            <button class="login_btn" type="submit" name="Submit_admin" form="Login_admin_Form">Login</button>  
           
           </form>
         </div>

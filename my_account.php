@@ -25,29 +25,27 @@ if(!isset($_SESSION['UserData']['Useremail'])){
         <div class="container">
           <div class="row">
             <div class="col-lg-4">
-                      <div class="card shadow-sm">
-                        <div class="card-header bg-transparent text-center">
-                          <?php  $testDB =  array_map('str_getcsv', file('test.db'));
-                          $key = '/' . $_SESSION['UserData']['Useremail'] . '/i';
-
-                          $userInfo = [];
-                          foreach ($testDB as $userMail) {
-                            if (preg_match($key, $userMail[0])) {
-                                $userInfo[] = $userMail;
-                                break;
-                            } 
-                          }
-                          ?>
-
-                          <img class="profile_img" src="uploads/<?php echo $userInfo[0][4];?>" alt="student dp">
-                        </div>
-                        <div class="card-upload text-center">
-                          <form action="my_account.php" method="post" name="upload_profile" enctype="multipart/form-data" id="upload_profile">
-                            <input type="file" class="form-control" id="profile_image" name="profile_image">
-                            <button class="btn btn-primary btn-lg" type="submit" name="Submit_img" form="upload_profile">Upload new image</button>
-                          </form>
-                        </div>
-                      </div>
+                <div class="card shadow-sm">
+                  <div class="card-header bg-transparent text-center">
+                    <?php  $testDB =  array_map('str_getcsv', file('test.db'));
+                    $key = '/' . $_SESSION['UserData']['Useremail'] . '/i';
+                    $userInfo = [];
+                    foreach ($testDB as $userMail) {
+                      if (preg_match($key, $userMail[0])) {
+                          $userInfo[] = $userMail;
+                          break;
+                      } 
+                    }
+                    ?>
+                    <img class="profile_img" src="uploads/<?php echo $userInfo[0][4];?>" alt="student dp">
+                  </div>
+                  <div class="card-upload text-center">
+                      <form action="my_account.php" method="post" name="upload_profile" enctype="multipart/form-data" id="upload_profile">
+                          <input type="file" class="form-control" id="profile_image" name="profile_image">
+                          <button class="btn btn-primary btn-lg" type="submit" name="Submit_img" form="upload_profile">Upload new image</button>
+                      </form>
+                  </div>
+                </div>
             </div>
             <div class="col-lg-8">
               <div class="card shadow-sm">
