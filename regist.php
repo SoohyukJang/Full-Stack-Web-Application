@@ -19,14 +19,15 @@
           $allowed = array('jpg', 'jpeg', 'png', 'gif');
           $fileUserName = explode('@', $useremail);
           $fileUserName = $fileUserName[0];
-        
-          if ($_FILES["profile_image"]["error"] == UPLOAD_ERR_OK) {
+
+          if (in_array($fileActualExt,$allowed)) {
+            if ($_FILES["profile_image"]["error"] == UPLOAD_ERR_OK) {
               $fileNameNew = $fileUserName . "." . $fileActualExt;
               $fileDestination = 'uploads/' . $fileNameNew;
               move_uploaded_file($fileTmp, $fileDestination);
-          }
+            }  
 
-          $file = fopen("test.db","r");
+            $file = fopen("test.db","r");
 
                 while(! feof($file)) {
                     $data = fgetcsv($file);
@@ -56,6 +57,11 @@
                 file_put_contents("test.db",$content);
                 header("location:login.php");
               }
+          } else {
+            $errorImg = 'You cannot upload images of this type!';
+            }
+        
+          
         }
 ?>
 
@@ -120,6 +126,8 @@
             <div class="input-group">
               <input class="form-control" name="profile_image" id="profile_image" type="file" />
               <span class="lighting"></span>
+              <?php if (isset($errorImg)) { ?>
+              <div><?php echo $errorImg ?></div> <?php }?>
             </div>
 
             <!-- submit button -->

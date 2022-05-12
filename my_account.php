@@ -27,6 +27,8 @@ if(!isset($_SESSION['UserData']['Useremail'])){
             <div class="col-lg-4">
                 <div class="card shadow-sm">
                   <div class="card-header bg-transparent text-center">
+
+
                     <?php  $testDB =  array_map('str_getcsv', file('test.db'));
                     $key = '/' . $_SESSION['UserData']['Useremail'] . '/i';
                     $userInfo = [];
@@ -42,6 +44,10 @@ if(!isset($_SESSION['UserData']['Useremail'])){
                   <div class="card-upload text-center">
                       <form action="my_account.php" method="post" name="upload_profile" enctype="multipart/form-data" id="upload_profile">
                           <input type="file" class="form-control" id="profile_image" name="profile_image">
+
+                          <?php if (isset($errorImg)) { ?>
+                          <div><?php echo $errorImg ?></div> <?php }?>
+
                           <button class="btn btn-primary btn-lg" type="submit" name="Submit_img" form="upload_profile">Upload new image</button>
                       </form>
                   </div>
