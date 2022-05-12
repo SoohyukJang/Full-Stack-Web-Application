@@ -16,6 +16,8 @@ accept_cookie.onclick = function(){
     alert("Unable to set cookie. Please allow all cookies site from cookie setting of your browser");
   }
  }
+
+ 
 // get cookie from the web browser
 let get_cookie= function(cookie_name){
   let name = cookie_name + "=";
@@ -34,11 +36,12 @@ let get_cookie= function(cookie_name){
 }
 // check cookie is set or not
 let check_cookie = function(){
-    let check = get_cookie(cookie_name);
-    if(check == ""){
+    let checkCookie = get_cookie(cookie_name);
+    if(checkCookie == ""){
+      // if there is no cookie, display pop up message
         document.getElementById("popup").style.display = "block";
     }else{
-        
+       // if there is cookie, turn off pop up 
         document.getElementById("popup").style.display = "none";
     }
 }
