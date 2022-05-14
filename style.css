@@ -1,0 +1,40 @@
+/* The message box is shown when the user clicks on the password field */
+#notice {
+  display:none;
+  /* background: #f1f1f1; */
+  /* color: #000; */
+  /* position: relative; */
+  /* padding: 20px; */
+  /* margin-top: 10px; */
+}
+
+#notice p {
+  padding: 10px 35px;
+  /* font-size: 18px; */
+}
+
+/* Add a green text color and a checkmark when the requirements are right */
+.status-success {
+  color: green;
+}
+
+.status-success:before {
+  /* position: relative; */
+  /* left: -35px; */
+  font-weight: bold;
+  text-align: left;
+  content: "O  ";
+}
+
+/* Add a red text color and an "x" when the requirements are wrong */
+.status-error {
+  color: red;
+}
+
+.status-error:before {
+  /* position: relative; */
+  /* left: -35px; */
+  font-weight: bold;
+  text-align: left;
+  content: "X  ";
+}
