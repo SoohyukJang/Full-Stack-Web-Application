@@ -12,7 +12,7 @@
             <div class="collapse navbar-collapse justify-content-between" id="navbar_collapse">
                 <div class="navbar-nav">
                     <a href="pagination.php" class="nav-item nav-link">User List</a>
-                    <a href="#" class="nav-item nav-link">Images</a>
+                    <a href="index_admin.php" class="nav-item nav-link">Images</a>
                 </div>
                 <form class="d-flex my-3 mx-5 px-5">
                     <div class="input-group">                    
