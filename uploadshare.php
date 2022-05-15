@@ -28,6 +28,7 @@
 <script src="preview.js"></script>
 </html>
 <?php
+if(isset($_POST["submit"])) {
     session_start();
     $Picture = $_POST['imgFile'];
     $Description = $_POST['description'];
@@ -41,9 +42,11 @@
             fclose($f);
         }
     }
+}
 ?> 
-<!-- Second Method I learned from Youtube
-    session_start();
+<!-- Another Method I learned from Youtube 
+   if(isset($_POST["submit"])){
+   session_start();
     $Picture = $_POST['imgFile'];
     $Description = $_POST['description'];
     $Choice = $_POST['SharingLevel'];
@@ -60,5 +63,6 @@
             'Description' => $description,
             'Choice' => $Choice 
         ) ;
-        fputcsv($f,$form_data);
-         -->
+        fputcsv($f,$form_data); 
+    }
+       -->
