@@ -42,7 +42,8 @@
         }
     }
 ?> 
-<!-- 유튭에서 배운 두번째 방법    session_start();
+<!-- Second Method I learned from Youtube
+    session_start();
     $Picture = $_POST['imgFile'];
     $Description = $_POST['description'];
     $Choice = $_POST['SharingLevel'];
