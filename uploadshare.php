@@ -1,3 +1,20 @@
+<?php
+if(isset($_POST["submit"])) {
+    session_start();
+    $Picture = $_POST['imgFile'];
+    $Description = $_POST['description'];
+    $Choice = $_POST['SharingLevel'];
+    if(!empty($Picture) || !empty($description) || !empty($choice)) {
+        $data = $Picture.",". $description. ",". $Choice;
+        $f = fopen("upload.csv","a");
+        if($f)
+        {
+            fwrite($f,$data."\n");
+            fclose($f);
+        }
+    }
+}
+?> 
 <html>
 <head>
     <meta charset="UTF-8">
@@ -27,42 +44,5 @@
 </body>
 <script src="preview.js"></script>
 </html>
-<?php
-if(isset($_POST["submit"])) {
-    session_start();
-    $Picture = $_POST['imgFile'];
-    $Description = $_POST['description'];
-    $Choice = $_POST['SharingLevel'];
-    if(!empty($Picture) || !empty($description) || !empty($choice)) {
-        $data = $Picture.",". $description. ",". $Choice;
-        $f = fopen("upload.csv","a");
-        if($f)
-        {
-            fwrite($f,$data."\n");
-            fclose($f);
-        }
-    }
-}
-?> 
-<!-- Another Method I learned from Youtube 
-   if(isset($_POST["submit"])){
-   session_start();
-    $Picture = $_POST['imgFile'];
-    $Description = $_POST['description'];
-    $Choice = $_POST['SharingLevel'];
-    if(!empty($Picture) || !empty($description) || !empty($choice)) 
-        $f = fopen("upload.csv","a");
-        $no_row = count(file("upload.csv"));
-        if ($no_row>1){
-            $no_rows = ($no_row-1)+1;
 
-        }
-        $form_data = array(
-            'no_row' => $no_row,
-            'picture' => $Picture,
-            'Description' => $description,
-            'Choice' => $Choice 
-        ) ;
-        fputcsv($f,$form_data); 
-    }
-       -->
+
