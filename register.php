@@ -71,10 +71,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width">
     <title>Sign up ∙ Instakilogram</title>
+    <link rel="stylesheet" href="style/header_footer.css">
     <link rel="stylesheet" href="style/index.css">
     <link rel="stylesheet" href="style/register.css">
     <link rel="stylesheet" href="cookie.css">
-    <link rel="stylesheet" href="style/header_footer.css">
     <link rel="stylesheet" href="css/bootstrap.min.css">
     <script src="js/bootstrap.bundle.min.js"></script>
   </head>
@@ -95,7 +95,7 @@
 
             <div class="wrapper">
 
-              <h5 class="title">Sign up to see photos and videos from your friends.</h5>
+              <h5 class="title">Sign up to see photos and videos<br>from your friends.</h5>
 
 
               <!-- user email input -->

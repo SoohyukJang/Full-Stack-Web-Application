@@ -8,11 +8,13 @@ if(!($_SESSION['UserData']['Useremail'] == 'admin@gmail.com')){
 <!DOCTYPE html>
 <html>
     <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width">
         <title>Admin Index</title>
         <link rel="stylesheet" href="cookie.css">
-        <link rel="stylesheet" href="header_footer.css">
+        <link rel="stylesheet" href="style/header_footer.css">
         <link rel="stylesheet" href="css/bootstrap.min.css">
-        <link rel="stylesheet" href="index.css">
+        <link rel="stylesheet" href="style/img_list.css">
         
     </head>
     <body>

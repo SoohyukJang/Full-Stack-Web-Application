@@ -42,7 +42,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width">
     <title>Login ∙ Instakilogram</title>
-    <link rel="stylesheet" href="style/index.css">
+    <link rel="stylesheet" href="style/common.css">
     <link rel="stylesheet" href="style/login.css">
     <link rel="stylesheet" href="cookie.css">
     <link rel="stylesheet" href="style/header_footer.css">
@@ -50,9 +50,8 @@
   </head>
 
   <body>
-  <!-- <?php include_once'header_notlogin.php'; ?> -->
     <main class="login_form">
-        <div class="inner-warpper text-center">
+        <div class="inner-wrapper text-center">
         
           <form action="login.php" method="post" name="Login_Form" id="Login_Form" class="Login_Form">
 
@@ -62,14 +61,12 @@
 
             <!-- user email input -->
             <div class="input-group">
-              <input class="input_login" name="Useremail" id="Useremail" type="text" placeholder="Email" />
-              <span class="lighting"></span>
+              <input class="form-control" name="Useremail" id="Useremail" type="text" placeholder="Email" />
             </div>
 
             <!-- password input -->
             <div class="input-group">
-              <input class="input_login" name="Password" id="Password" type="password" placeholder="Password" />
-              <span class="lighting"></span>
+              <input class="form-control" name="Password" id="Password" type="password" placeholder="Password" />
             </div>
 
             <?php if(isset($msg)){?>

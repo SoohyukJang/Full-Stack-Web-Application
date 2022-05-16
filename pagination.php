@@ -10,10 +10,14 @@ if(!(isset($_SESSION['UserData']['Useremail']))){
 <!DOCTYPE html>
 <html>
     <head>
-        <link rel="stylesheet" href="css/bootstrap.min.css">
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width">
+      <link rel="stylesheet" href="style/common.css">
+      <link rel="stylesheet" href="style/header_footer.css">
+      <link rel="stylesheet" href="css/bootstrap.min.css">
     </head>
     <body>
-      
+      <?php include_once'admin_header.php';?>
       <main>
         <?php
 
@@ -127,5 +131,6 @@ if(!(isset($_SESSION['UserData']['Useremail']))){
           </ul>
         </div>
       </main>
+      <?php include_once'footer.php' ?>
     </body> 
 </html>

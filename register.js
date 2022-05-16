@@ -64,7 +64,7 @@ userFname.onkeyup = function fnameValidation() {
   let fname = document.querySelector('#Firstname').value;
 
   if (fname.length < min || fname.length > max) {
-    document.querySelector('#fnameCheck').innerHTML = `Your name must be between ${min} and ${max} characters.`;
+    document.querySelector('#fnameCheck').innerHTML = `Must be between ${min} and ${max} characters`;
     document.querySelector("#fnameCheck").classList.remove("status-success");
     document.querySelector("#fnameCheck").classList.add("status-error");
   } else {
@@ -85,7 +85,7 @@ userLname.onkeyup = function lnameValidation() {
   let lname = document.querySelector('#Lastname').value;
 
   if (lname.length < min || lname.length > max) {
-    document.querySelector('#lnameCheck').innerHTML = `Your name must be between ${min} and ${max} characters.`;
+    document.querySelector('#lnameCheck').innerHTML = `Must be between ${min} and ${max} characters`;
     document.querySelector("#lnameCheck").classList.remove("status-success");
     document.querySelector("#lnameCheck").classList.add("status-error");
   } else {

@@ -1,10 +1,6 @@
-<style>
-    .img-fluid {
-        max-width: 100%;
-        height: auto;
-    }
-</style>
-
+<link rel="stylesheet" href="style/common.css">
+<!-- <link rel="stylesheet" href="style/header_footer.css"> -->
+<link rel="stylesheet" href="style/index.css">
 
 <?php if (isset($_POST['deleteImg'])) {
     $imgDeleted = $_POST['deleteImg'];
@@ -44,12 +40,18 @@
 $imgList = array_map('str_getcsv', file('img.csv'));
 foreach ($imgList as $img) {?>
     <div class="d-flex">
-        <img src="img/<?php echo $img[0] ?>" alt="img" class="img-fluid">
-        <br>
-        <span><?php echo $img[1] ?></span>
-        <form action="index_admin.php" method="post" id="deleteImage">
-            <button type="submit" name="deleteImg" value="<?php echo $img[0] ?>" for="deleteImage">Delete Image</button>
-        </form>
+      <div class="col-lg-2 col-xs-12"></div>
+      <div class="col-lg-8 col-xs-12 section1">
+        <div class="image-display">
+          <img src="img/<?php echo $img[0] ?>" alt="img" class="img-fluid">
+          <br>
+          <p class="imgLine"><?php echo $img[1] ?></p>
+          <form action="index_admin.php" method="post" id="deleteImage">
+              <button type="submit" name="deleteImg" value="<?php echo $img[0] ?>" for="deleteImage">Delete Image</button>
+          </form>
+        </div>
+      </div>
+      <div class="col-lg-2 col-xs-12"></div>
     </div>
 
 <?php }

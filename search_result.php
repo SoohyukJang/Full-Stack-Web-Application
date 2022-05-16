@@ -10,10 +10,15 @@ if(!(isset($_SESSION['UserData']['Useremail']))){
 <!DOCTYPE html>
 <html>
     <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width">
         <link rel="stylesheet" href="css/bootstrap.min.css">
+        <link rel="stylesheet" href="style/header_footer.css">
+        <link rel="stylesheet" href="css/bootstrap.min.css">
+        <link rel="stylesheet" href="style/index.css">
     </head>
     <body>
-
+    <?php include_once'admin_header.php';?>
     <?php $keyWords = array();
 
         if (isset($_POST['submitSearch'])) {

@@ -27,51 +27,43 @@
 <html lang="en" >
   <head>
     <meta charset="UTF-8">
-    <title>Admin Login</title>
-    <link rel="stylesheet" href="login.css">
+    <title>Admin Login ∙ Instakilogram</title>
+    <link rel="stylesheet" href="style/common.css">
+    <link rel="stylesheet" href="style/login_admin.css">
     <link rel="stylesheet" href="cookie.css">
-    <link rel="stylesheet" href="header_footer.css">
+    <link rel="stylesheet" href="style/header_footer.css">
     <link rel="stylesheet" href="css/bootstrap.min.css">
   </head>
 
   <body>
-  <?php include_once'header_notlogin.php'; ?>
-    <main class="login_form">      
-      <div class="logo text-center">
-        <h1>InstaKilogram</h1>
-      </div>
-      <div class="wrapper">
-        <div class="inner-warpper text-center">
-
-        <?php if(isset($msg)){?>
-          <div><?php echo $msg;?> </div><?php } ?>
+    <main class="login_form">
+        <div class="inner-wrapper text-center">
         
-          <h2 class="title">Login to Admin account</h2>
-          <form action="login_admin.php" method="post" name="Login_admin_Form" id="Login_admin_Form">
+          <form action="login_admin.php" method="post" name="Login_admin_Form" id="Login_admin_Form" class="Login_Form">
+
+          <div class="logo text-center">
+            <h1>InstaKilogram</h1>
+          </div>
 
             <!-- user email input -->
             <div class="input-group">
               <input class="form-control" name="adminEmail" id="adminEmail" type="text" placeholder="Email" />
-              <span class="lighting"></span>
             </div>
 
             <!-- password input -->
             <div class="input-group">
               <input class="form-control" name="adminPw" id="adminPw" type="password" placeholder="Password" />
-              <span class="lighting"></span>
             </div>
 
+            <?php if(isset($msg)){?>
+            <div><?php echo $msg;?> </div><?php } ?>
+
             <!-- submit button -->
-            <button class="login_btn" type="submit" name="Submit_admin" form="Login_admin_Form">Login</button>  
+            <button class="login_btn" type="submit" name="Submit_admin" form="Login_admin_Form">Log in</button>  
           
           </form>
         </div>
       
-        <!-- link to registration page -->
-        <div class="signup-wrapper text-center">
-          <a href="regist.php">Don't have an accout? <span class="text-primary">Create One</span></a>
-        </div>
-      </div>
       <?php include_once'cookie.php'; ?> 
     </main>
     <?php include_once'footer.php'; ?>

@@ -56,12 +56,14 @@ $currentUser = $_GET['user'];
 <!DOCTYPE html>
 <html>
   <head>
-    <title>My Account</title>
-    <link rel="stylesheet" href="my_account.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width">
+    <title>My Account ∙ Instakilogram</title>
+    <link rel="stylesheet" href="style/my_account.css">
     <link rel="stylesheet" href="css/bootstrap.min.css">
-    <link rel="stylesheet" href="header_footer.css">
+    <link rel="stylesheet" href="style/header_footer.css">
     <link rel="stylesheet" href="cookie.css"> 
-    <link rel="stylesheet" href="regist.css">     
+    <link rel="stylesheet" href="style/register.css">     
   </head>
 
   <body>
