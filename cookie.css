@@ -1,0 +1,30 @@
+#popup {
+    background: white;
+    width: 22%;
+    position: fixed;
+    left: 20px;
+    bottom: 25px;
+    box-shadow: 0px 0px 15px #cccccc;
+    padding: 5px 10px;
+    border-radius: 7px;
+  }
+    #message{
+    text-align: left;
+    font-size: 16px;
+    color: #4e4e4e;
+    margin-left: 5px;
+  }
+  #popup button{
+    width: 50%;
+    border: navajowhite;
+    background: #a73ca5;
+    padding: 5px;
+    border-radius: 5px;
+    color: white;
+    margin-right: 10px;
+    margin-bottom: 10px;
+  }
+  #popup h2{
+      margin-left: 5px;
+  }
+  

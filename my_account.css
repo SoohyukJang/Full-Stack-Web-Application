@@ -1,0 +1,50 @@
+body main{
+    background: #dc73d0;  /* fallback for old browsers */
+    background: linear-gradient(to right, #62bfed, #eaa6df); 
+    padding: 150px 150px;
+    margin: 0;
+    color: #000;
+}
+.profile .card {
+    border-radius: 10px;
+}
+.profile .card .card-header .profile_img {
+    width: 130px;
+    height: 130px;
+    object-fit: cover;
+    margin: 5px auto;
+    border: 2px solid rgb(185, 100, 173);
+    border-radius: 50%;
+}
+.profile .card h3 {
+    font-size: 24px;
+    font-weight: 700;
+}
+.profile .card p {
+    font-size: 20px;
+    color: #000;
+}
+.profile .table th,
+.profile .table td {
+    font-size: 20px;
+    padding: 5px 10px;
+    color: #000;
+}
+.card .card-upload button {
+    font-size: 16px;
+    margin: 10px;
+}
+
+.text-right{
+    text-align: right;
+}
+.card-body button {
+    text-align: right;
+    size: 40px;
+}
+.shadow-sm {
+    margin-top: 20px;
+}
+.detailed info th {
+    width: auto;
+}

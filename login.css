@@ -1,0 +1,108 @@
+body {
+  background: #e487d9;  /* fallback for old browsers */
+  background: -webkit-linear-gradient(to right, #6fc5f0, #eaa3da);  
+  background: linear-gradient(to right, #62bfed, #eaa6df);
+}
+
+.text-center {
+  text-align: center;
+}
+
+a {
+  color: #d340ca;
+}
+
+a:hover,
+a:focus {
+  color: #e84eaa;
+}
+
+.text-primary {
+  color: #e62ed9;
+}
+
+.logo h1 {
+  size: 100px;
+  color: #eb31df79;
+  margin-bottom: 30px;
+  margin-top: 30px;
+  font-size: 50px ;
+}
+
+.login_btn {
+  cursor: pointer;
+  background: #a9078c;
+  width: 100%;
+  border: 0;
+  padding: 10px 10px;
+  color: #fff;
+  font-size: 21px;
+  margin-top: 10px;
+}
+
+.login_form .input-group {
+  position: relative;
+  margin-bottom: 20px;
+}
+.login_form .input-group label {
+  position: absolute;
+  top: 9px;
+  left: 10px;
+  font-size: 16px;
+  color: #cdcdcd;
+  font-weight: normal;
+  padding: 2px 5px;
+  z-index: 5;  
+}
+
+.login_form .input-group input {
+  outline: none;
+  display: block;
+  width: 100%;
+  height: 40px;
+  position: relative;
+  z-index: 3;
+  border: 1px solid #d9d9d9;
+  padding: 10px 10px;
+  background: #ffffff;
+  box-sizing: border-box;
+  font-weight: 400;
+}
+
+.login_form .input-group .lighting {
+  background: #f20bcf;
+  width: 0;
+  height: 2px;
+  display: inline-block;
+  position: absolute;
+  top: 40px;
+  left: 0;
+}
+
+.login_form .wrapper {
+  width: 320px;
+  background: #fff;
+  margin: 20px auto;
+  min-height: 200px;
+  border: 1px solid #f3f3f3;
+}
+.login_form .wrapper .inner-warpper {
+  padding: 50px 30px 50px;
+  box-shadow: 1px 1.732px 10px 0px rgba(0, 0, 0, 0.063);
+}
+.login_form .wrapper .title {
+  margin-top: 5px;
+}
+.login_form .wrapper .signup-wrapper {
+  padding: 10px;
+  font-size: 14px;
+  background: #dbd8d8;
+}
+.login_form .wrapper .signup-wrapper a {
+  text-decoration: none;
+  color: #747070;
+}
+.login_form .wrapper .signup-wrapper a:hover {
+  text-decoration: underline;
+}
+
