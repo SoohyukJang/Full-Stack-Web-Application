@@ -6,22 +6,9 @@ a {
   color: #0095f6;
 }
 
-/* .register_form {
-  width: 350px;
-  margin: 20px auto;
-  min-height: 200px;
-  border: 1px solid #f3f3f3;
-} */
-
-/* .register_form .inner-warpper {
-  padding: 50px 30px 50px;
-  box-shadow: 1px 1.732px 10px 0px rgba(0, 0, 0, 0.063);
-} */
-
-
 #Register_Form {
   width: 350px;
-  height: 830px;
+  height: 880px;
   margin: 100px auto;
   display: flex;
   flex-direction: column;
@@ -43,13 +30,9 @@ a {
 
 .title {
   color: #8e8e8e;
-  margin-bottom: 35px;
+  margin-bottom: 30px;
 }
 
-/* .register_form .input-group {
-  position: relative;
-  margin-bottom: 20px;
-} */
 .register_form .input-group input {
   width: 270px;
   height: 40px;
@@ -61,45 +44,31 @@ a {
   border-radius: 3px;
   font-size: 14px;
 }
-
 .register_form .input-group #emailVerification {
   width: 270px;
   margin: 3px auto;
   text-align: left;
-  /* margin-left: -14px; */
-  /* padding: 0 10px; */
-  /* display: block; */
-  /* background-color: #ffffff; */
-  /* border: 1px solid #DBDBDB; */
-  /* border-radius: 3px; */
-  /* font-size: 10px; */
 }
 .register_form .input-group #pwCheck1 {
   width: 270px;
   margin: 3px auto;
   text-align: left;
-  /* margin-left: -43px; */
 }
 .register_form .input-group #pwCheck2 {
   width: 270px;
   margin: 3px auto;
   text-align: left;
-  /* margin-left: -14px; */
-  /* margin-left: -23px; */
 }
 .register_form .input-group #fnameCheck {
   width: 270px;
   margin: 3px auto;
   text-align: left;
-  /* margin-left: -18px; */
 }
 .register_form .input-group #lnameCheck {
   width: 270px;
   margin: 3px auto;
   text-align: left;
-  /* margin-left: -18px; */
 }
-
 .status-success {
   color: green;
 }
@@ -129,7 +98,6 @@ a {
 .reset_btn {
   width: 268px;
   height: 30px;
-  /* margin: 13px auto; */
   margin-bottom: 20px;
   background-color: #0095f6;
   border: none;
@@ -148,7 +116,6 @@ a {
 .register_form .login-wrapper {
   padding: 18px;
   font-size: 14px;
-  /* background: #fafafa; */
 }
 .register_form .login-wrapper a {
   text-decoration: none;
@@ -161,22 +128,3 @@ a {
 .register_form .login-wrapper span:hover {
   text-decoration: underline;
 }
-
-
-
-
-/* .register_form .login-wrapper {
-  padding: 18px;
-  font-size: 14px;
-}
-.register_form .login-wrapper a {
-  text-decoration: none;
-  color: #282828;
-}
-.register_form .login-wrapper span {
-  text-decoration: solid;
-  color: #0095f6;
-}
-.register_form .login-wrapper span:hover {
-  text-decoration: underline;
-} */

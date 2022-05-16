@@ -44,10 +44,10 @@ a {
 }
 
 .login_btn {
-  flex: none;
   width: 268px;
   height: 30px;
   margin: 13px auto;
+  margin-top: 12%;
   background-color: #0095f6;
   border: none;
   border-radius: 3px;
