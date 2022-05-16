@@ -16,7 +16,7 @@
         <select name="sLevel" val="sLevel">
             <option val="private">Private</option>
             <option val="internal">Internal</option>
-            <option val="public">Public</option>
+            <option val="public" name = "private">Public</option>
         </select>
         <textarea class="textarea" id= "description" name="description" cols='40' rows='5' placeholder="Write down your description here."></textarea>
         <input type="submit" name="submit"></input>

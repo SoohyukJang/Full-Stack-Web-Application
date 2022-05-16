@@ -1,10 +1,8 @@
-
 <form name="backtomain" method="post" action="uploadshare.php" enctype="multipart/form-data"> 
 	<input type="submit" name="back" value="Back"></input>
 </form>
 <?php
     if(isset($_POST['submit'])){
-        var_dump($_POST);
         $SharingLevel = $_POST["sLevel"];
         $Text = $_POST["description"];
 		$fileTmp = $_FILES['imgFile']['tmp_name'];
@@ -13,19 +11,34 @@
         $fileType= $_FILES['imgFile']['type'];
 		$fileName = $_FILES['imgFile']['name'];
         $comma = ',';
+		$UserEmail = $_POST['Useremail']['name'];
+		$fileUserName = explode('@',$Useremail);
+		$fileUserName = $fileUserName[0];
 
 		$fileExt = explode('.', $fileName);
         $fileActualExt = strtolower(end($fileExt));
-		print_r($SharingLevel);
-		if ($SharingLevel == 'private') {
-				echo 'private';
+		if ($SharingLevel == 'Internal') {
+				echo 'You have shared the article with Internal Level. '; 
 				$fileNameNew = $SharingLevel . uniqid() . '.' .$fileActualExt;
 		} else {
 			$fileNameNew = $SharingLevel . uniqid() . '.' .$fileActualExt;
 		}
+
+		if ($SharingLevel == 'Public') {
+			echo 'You have shared the article with Public Level. ';
+				$fileNameNew = $SharingLevel . uniqid() . '.' .$fileActualExt;
+		} else {
+			$fileNameNew = $SharingLevel . uniqid() . '.' .$fileActualExt;
+		}
+		if ($SharingLevel == 'Private') {
+				echo 'You have shared the article with Private Level. ';
+				$fileNameNew = $SharingLevel . $fileUserName. uniqid() . '.' .$fileActualExt;
+		} else {
+			$fileNameNew = $SharingLevel . $fileUserName. uniqid() . '.' .$fileActualExt;
+		}
+	}
         
 
-    }
 
 	?>
 
