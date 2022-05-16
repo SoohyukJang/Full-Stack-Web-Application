@@ -66,9 +66,15 @@ else {
         $fileType= $_FILES['imgFile']['type'];   
         $fileExt = explode('.', $fileName);
         $fileActualExt = strtolower(end($fileExt));
-        $new_user = $SharingLevel. $comma. $Text. $comma. $fileNameNew;
-        $content = $new_user.$old_file;
-        $old_file = file_get_contents("upload.db",$content);
+		$f = fopen('/upload.db','a');
+		if(!empty($fileName)|| !empty($Text) ||){
+			$FileFormat = $SharingLevel. $comma. $Text. $comma. $fileNameNew;
+			fwrite($f,$FileFormat);
+			fclose($f);
+
+		}
+    
+		
 
     }
 
