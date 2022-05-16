@@ -21,7 +21,7 @@
       $oldUserData = [];
       $newUserData = [];
 
-      $userFile =  array_map('str_getcsv', file('test.db'));
+      $userFile =  array_map('str_getcsv', file('data/accounts.db'));
 
       // find the information of current user
       foreach ($userFile as $userLine) {
@@ -46,10 +46,10 @@
 
       
       // clear old db file
-      $userFile2 = fopen('test.db', 'w');
+      $userFile2 = fopen('data/accounts.db', 'w');
       fclose($userFile2);
 
-      $userFile2 = fopen('test.db', 'a');
+      $userFile2 = fopen('data/accounts.db', 'a');
       // write oldUserData back into db file
       foreach ($oldUserData as $line) {
         $line = implode(',',$line);

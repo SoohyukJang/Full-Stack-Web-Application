@@ -28,7 +28,7 @@ if(!(isset($_SESSION['UserData']['Useremail']))){
               };
         
 
-        $file =  array_map('str_getcsv', file('test.db'));
+        $file =  array_map('str_getcsv', file('data/accounts.db'));
 
         $accountsdb = [];
 

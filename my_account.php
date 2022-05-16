@@ -29,7 +29,7 @@ if(!isset($_SESSION['UserData']['Useremail'])){
                   <div class="card-header bg-transparent text-center">
 
 
-                    <?php  $testDB =  array_map('str_getcsv', file('test.db'));
+                    <?php  $testDB =  array_map('str_getcsv', file('data/accounts.db'));
                     $key = '/' . $_SESSION['UserData']['Useremail'] . '/i';
                     $userInfo = [];
                     foreach ($testDB as $userMail) {

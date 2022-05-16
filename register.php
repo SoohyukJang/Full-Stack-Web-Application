@@ -27,7 +27,7 @@
           move_uploaded_file($fileTmp, $fileDestination);
         }  
 
-        $file = fopen("test.db","r");
+        $file = fopen("data/accounts.db","r");
 
             while(! feof($file)) {
                 $data = fgetcsv($file);
@@ -50,9 +50,9 @@
             $msg="<span style='color:red'>Email Exist</span>";
           } else {
               $new_user =  $useremail . $comma . $pw . $comma . $fname . $comma . $lname . $comma . $fileNameNew . "\n";
-              $old_file = file_get_contents("test.db");
+              $old_file = file_get_contents("data/accounts.db");
               $content = $new_user . $old_file;
-              file_put_contents("test.db", $content);
+              file_put_contents("data/accounts.db", $content);
               header("location:login.php");
           }
       } else {
