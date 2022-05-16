@@ -1,6 +1,6 @@
 <style>
-    img {
-        width: 50%;
+    .img-fluid {
+        max-width: 100%;
         height: auto;
     }
 </style>
@@ -44,7 +44,7 @@
 $imgList = array_map('str_getcsv', file('img.csv'));
 foreach ($imgList as $img) {?>
     <div class="d-flex">
-        <img src="img/<?php echo $img[0] ?>" alt="img">
+        <img src="img/<?php echo $img[0] ?>" alt="img" class="img-fluid">
         <br>
         <span><?php echo $img[1] ?></span>
         <form action="index_admin.php" method="post" id="deleteImage">
