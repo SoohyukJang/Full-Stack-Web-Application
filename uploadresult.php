@@ -52,7 +52,7 @@
 			break;
 		
 		default:
-			echo "Only image format jpeg, jpg, png is allowed";  
+			echo "Only image format jpeg, jpg, png, gif is allowed";  
 			exit;
 			break;
 	}
