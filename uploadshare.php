@@ -1,20 +1,3 @@
-<?php
-if(isset($_POST["submit"])) {
-    session_start();
-    $Picture = $_POST['imgFile'];
-    $Description = $_POST['description'];
-    $Choice = $_POST['SharingLevel'];
-    if(!empty($Picture) || !empty($description) || !empty($choice)) {
-        $data = $Picture.",". $description. ",". $Choice;
-        $f = fopen("upload.csv","a");
-        if($f)
-        {
-            fwrite($f,$data."\n");
-            fclose($f);
-        }
-    }
-}
-?> 
 <html>
 <head>
     <meta charset="UTF-8">
@@ -25,24 +8,22 @@ if(isset($_POST["submit"])) {
 </head>
 <title> Image upload and Sharing</title>
 <body>
-<form name="uploadform" method="post" action="uploadresult.php" enctype="multipart/form-data"> 
- <hr> <br>
+<form name="uploadform" method="POST" action="uploadresult.php" enctype="multipart/form-data">  
  <div class="TextareaDesign">
     <div class="image-preview">
         <img style="width: 200px;" id="image-preview" src="https://thumbs.dreamstime.com/b/preview-stamp-round-grunge-sign-tag-172117942.jpg">
         <input type="file" name="imgFile" id="imgFile">
-        <select name="SharingLevel" val="SharingLevel">
+        <select name="sLevel" val="sLevel">
             <option val="private">Private</option>
             <option val="internal">Internal</option>
             <option val="public">Public</option>
         </select>
-        <input type="submit" name="submit"></input>
         <textarea class="textarea" id= "description" name="description" cols='40' rows='5' placeholder="Write down your description here."></textarea>
+        <input type="submit" name="submit"></input>
+ 
     </div>
  </div>
 </form>
 </body>
 <script src="preview.js"></script>
 </html>
-
-
