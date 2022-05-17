@@ -17,15 +17,18 @@ main {
   background-color: #fff;
   border: 2px solid #dbdbdb;
 }
+
 .image-fluid {
   max-width: 100%;
   height: auto;
 }
+
 img {
   width: 100%;
   height: auto;
   margin-bottom: 10px;
 }
+
 .imgLine {
   font-size: 20px;
   font-style: italic;
