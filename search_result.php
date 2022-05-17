@@ -7,15 +7,15 @@ if(!(isset($_SESSION['UserData']['Useremail']))){
 }
 ?>
 
-<!DOCTYPE html>
-<html>
+<html lang="en">
     <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width">
-        <link rel="stylesheet" href="css/bootstrap.min.css">
-        <link rel="stylesheet" href="style/header_footer.css">
-        <link rel="stylesheet" href="css/bootstrap.min.css">
-        <link rel="stylesheet" href="style/index.css">
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <title>Search ∙ Instakilogram</title>
+      <link rel="stylesheet" href="style/header_footer.css">
+      <link rel="stylesheet" href="style/index.css">
+      <link rel="stylesheet" href="css/bootstrap.min.css">
+      <link rel="stylesheet" href="css/bootstrap.min.css">
     </head>
     <body>
     <?php include_once'admin_header.php';?>

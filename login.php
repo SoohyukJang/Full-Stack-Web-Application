@@ -36,17 +36,16 @@
 ?>
 
 
-<!DOCTYPE html>
-<html lang="en" >
+<html lang="en">
   <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Login ∙ Instakilogram</title>
     <link rel="stylesheet" href="style/common.css">
     <link rel="stylesheet" href="style/login.css">
-    <link rel="stylesheet" href="cookie.css">
     <link rel="stylesheet" href="style/header_footer.css">
     <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="cookie.css">
   </head>
 
   <body>

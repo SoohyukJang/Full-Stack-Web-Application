@@ -7,16 +7,15 @@ if(!isset($_SESSION['UserData']['Useremail'])){
 
 <?php include_once('upload_img.php') ?>
 
-<!DOCTYPE html>
-<html>
-  <head>        
+<html lang="en">
+  <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>My Account ∙ Instakilogram</title>
     <link rel="stylesheet" href="style/my_account.css">
-    <link rel="stylesheet" href="css/bootstrap.min.css">
     <link rel="stylesheet" href="style/common.css">
     <link rel="stylesheet" href="style/header_footer.css">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
     <link rel="stylesheet" href="cookie.css"> 
     <script src="js/bootstrap.bundle.min.js"></script>     
   </head>
