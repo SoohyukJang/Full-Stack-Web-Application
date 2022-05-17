@@ -1,6 +1,6 @@
 # Full-Stack-Web-Application
 Group 20 :
-Name          sNumber  Contribution
+
 Doan Thien Di s3926977 35%
 
 Bui Minh Khoi s3929015 14%
