@@ -1,5 +1,4 @@
 <link rel="stylesheet" href="style/common.css">
-<!-- <link rel="stylesheet" href="style/header_footer.css"> -->
 <link rel="stylesheet" href="style/index.css">
 
 <?php if (isset($_POST['deleteImg'])) {
