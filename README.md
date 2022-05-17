@@ -1,6 +1,6 @@
 # Full-Stack-Web-Application
 Group 20:
-Name          sNumber  Contribution
+Name/Student Number/Contribution
 
 Doan Thien Di s3926977 35%
 
