@@ -10,7 +10,7 @@ a {
   color: #0095f6;
 }
 
-.Login_Form {
+.login_form .inner-wrapper {
   width: 350px;
   height: 380px;
   margin: 100px auto;
@@ -38,7 +38,7 @@ a {
   margin: 3px auto;
   padding: 0 10px;
   display: block;
-  border: 1px solid #DBDBDB;
+  /* border: 1px solid #DBDBDB; */
   border-radius: 3px;
   font-size: 14px;
 }

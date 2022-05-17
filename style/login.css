@@ -10,7 +10,7 @@ a {
   color: #0095f6;
 }
 
-.Login_Form {
+.login_form .inner-wrapper {
   width: 350px;
   height: 380px;
   margin: 100px auto;
