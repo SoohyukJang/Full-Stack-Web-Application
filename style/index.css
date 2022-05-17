@@ -11,7 +11,7 @@ main {
 .image-display {
   padding: 15px 15px;
   background-color: #fff;
-  border: 2px solid #dbdbdb;
+  border: 1px solid #dbdbdb;
 }
 
 .image-fluid {
