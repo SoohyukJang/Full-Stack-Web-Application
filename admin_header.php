@@ -1,7 +1,7 @@
 <?php ?>
 <nav class="navbar navbar-expand-lg">
         <div class="container-fluid mx-5">
-            <a href="index.php" class="navbar-brand"><h2>InstaKilogram</h2></a>
+            <a href="index_admin.php" class="navbar-brand"><h2>InstaKilogram</h2></a>
             <button type="button" class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbar_collapse">
                 <span class="navbar-toggler-icon"></span>
             </button>

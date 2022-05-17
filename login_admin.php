@@ -64,7 +64,6 @@
           
           </form>
         </div>
-      
       <?php include_once'cookie.php'; ?> 
     </main>
     <?php include_once'footer.php'; ?>
