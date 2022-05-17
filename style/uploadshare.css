@@ -1,0 +1,39 @@
+body {
+    background-color: #fafafa;
+    padding : 0;
+    margin: 0;
+}
+
+.textareaDesign{
+    width: auto;
+    height: auto;
+    display: flex;
+    background-color: #fff;
+    border: 2px solid #dbdbdb;
+    flex-wrap: wrap;    
+}
+
+.imagePreview {
+  width: 95%;
+  height: auto;
+  margin: auto;
+  margin-top: 15px;
+  margin-bottom: 20px;
+}
+
+.options {
+  margin-bottom: 20px;
+}
+
+.description {
+  margin-top: 15px;
+}
+
+.description .textarea {
+  width: 100%;
+}
+
+.submitBtn {
+  margin-top: 15px;
+  margin-bottom: 15px;
+}

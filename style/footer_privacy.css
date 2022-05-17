@@ -1,0 +1,32 @@
+main {
+  padding: 100px 100px;
+  margin-left: 250px;
+  margin-right: 250px;
+}
+
+.citation {
+  text-align: center;
+  color: #dbdbdb;
+  margin-bottom: 75px;
+  border: 2px solid #dbdbdb;
+  padding: 30px;
+}
+.citation h3 {
+  font-weight: bold;
+  line-height: 170%;
+}
+
+.container_etc h3 {
+  font-weight: bold;
+  line-height: 170%;
+}
+.container_etc p {
+  text-align: justify;
+  font-size: 17px;
+}
+.container_etc ul li {
+  list-style-type: square;
+  font-size: 17px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}

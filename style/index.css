@@ -1,0 +1,33 @@
+main {
+  padding: 100px 100px;
+  margin: 0;
+}
+
+.container {
+  width: 1120px;
+  max-width: none !important;
+}
+
+.image-display {
+  padding: 15px 15px;
+  background-color: #fff;
+  border: 2px solid #dbdbdb;
+}
+
+.image-fluid {
+  max-width: 100%;
+  height: auto;
+}
+
+img {
+  width: 100%;
+  height: auto;
+  margin-bottom: 10px;
+}
+
+.imgLine {
+  font-size: 20px;
+  font-style: italic;
+  margin-left: 5%;
+  margin-bottom: 5%;
+}

@@ -1,0 +1,79 @@
+body {
+  background-color: #DBDBDB;
+}
+
+a {
+  cursor: default;
+}
+
+.text-primary {
+  color: #0095f6;
+}
+
+.login_form .inner-wrapper {
+  width: 350px;
+  height: 380px;
+  margin: 100px auto;
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+  flex-wrap: wrap;
+  background-color: #ffffff;
+  border: 1px solid #DBDBDB;
+}
+
+.logo h1 {
+  margin-bottom: 50px;
+  margin-top: 45px;
+  font-size: 45px ;
+  background: -webkit-linear-gradient(10deg, #0095f6, #ff6ffa);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.login_form .inner-wrapper .input-group input {
+  flex: none;
+  width: 270px;
+  height: 40px;
+  margin: 3px auto;
+  padding: 0 10px;
+  display: block;
+  /* border: 1px solid #DBDBDB; */
+  border-radius: 3px;
+  font-size: 14px;
+}
+
+.login_btn {
+  width: 268px;
+  height: 30px;
+  margin: 13px auto;
+  margin-top: 12%;
+  background-color: #0095f6;
+  border: none;
+  border-radius: 3px;
+  color: white;
+  font-size: 14px;
+  font-weight: 600;
+}
+.login_btn :enabled:hover {
+  cursor: pointer;
+}
+.login_btn :focus {
+  outline: none;
+}
+
+.login_form .signup-wrapper {
+  padding: 18px;
+  font-size: 14px;
+}
+.login_form .signup-wrapper a {
+  text-decoration: none;
+  color: #282828;
+}
+.login_form .signup-wrapper span {
+  text-decoration: solid;
+  color: #0095f6;
+}
+.login_form .signup-wrapper span:hover {
+  text-decoration: underline;
+}
