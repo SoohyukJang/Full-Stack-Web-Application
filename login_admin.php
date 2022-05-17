@@ -36,6 +36,7 @@
   </head>
 
   <body>
+  <?php include_once'header_notlogin.php'; ?>
     <main class="login_form">
         <div class="inner-wrapper text-center">
         
