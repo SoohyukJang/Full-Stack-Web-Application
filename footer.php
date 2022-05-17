@@ -4,13 +4,10 @@
           <div class="row">
               <div class="footer-links text-center">
                 <p class="footer_small">
-                  <a href="#">About</a>
-                  <a href="#">Blog</a>
-                  <a href="#">Jobs</a>
-                  <a href="#">Help</a>
-                  <a href="#">Privacy</a>
-                  <a href="#">Help</a>
-                  <a href="#">Terms</a>
+                  <a href="footer_about.php">About</a>
+                  <a href="footer_help.php">Help</a>
+                  <a href="footer_privacy.php">Privacy</a>
+                  <a href="footer_terms.php">Terms</a>
                 </p>
               </div>
             </div>
