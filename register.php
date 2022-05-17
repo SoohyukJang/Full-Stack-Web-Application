@@ -79,7 +79,7 @@
   </head>
 
   <body>
-    <!-- <?php include_once'header_notlogin.php'; ?> -->
+    <?php include_once'header_notlogin.php'; ?>
     <main class="register_form">
         <div class="inner-warpper text-center">
 
